@@ -1,0 +1,46 @@
+@font-face {
+    font-family: Clock;
+    src: url("/Seven Segment.ttf")
+}
+
+body {
+    margin: 0;
+    background: #1B244A;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.scoreboard {
+    display: block;
+    margin: 20px auto;
+    background: #080001;
+    padding: 30px 30px;
+    border-radius: 5px;
+    font-family: Clock, sans-serif;
+    font-size: 60px;
+    color: #F94F6D;
+    text-align: center;
+}
+
+button {
+    height: 40px;
+    width: 40px;
+    background: #1B244A;
+    color: #9AABD8;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    font-family: Clock, sans-serif;
+    font-size: 20px;
+}
+
+.reset-button {
+    width: 100%;
+    margin-top: 10px;
+}
