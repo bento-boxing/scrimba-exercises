@@ -4,6 +4,10 @@
     medium gray
  */
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #1F2937;
     color: white;
