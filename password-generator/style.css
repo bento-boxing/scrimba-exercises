@@ -1,0 +1,67 @@
+/* Colours
+    #1F2937
+    #10B981
+    medium gray
+ */
+
+body {
+    background-color: #1F2937;
+    color: white;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+#container {
+    margin: 20% auto;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+#green-text {
+    color: #10B981;
+}
+
+button {
+    background-color: #10B981;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin: 5px 0 30px 0;
+}
+
+p {
+    margin: 10px 0 40px 0;
+}
+
+.copy {
+    background-color: #273549;
+    color: #10B981;
+    width: 48%;
+    text-align: center;
+    min-height: 28px;
+    text-wrap: pretty;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.copy:focus {
+    background-color: #10B981;
+    color: white;
+}
+
+#password-container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #273549;
+    padding-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
