@@ -5,11 +5,11 @@
 }
 
 :root {
-    --dark-gray-background: #1F2937;
-    --purple-text: #CCC1FF;
-    --light-gray-box: #273549;
-    --bright-purple-background: #6943FF;
-    --input-border: #B295FF;
+    --lower-background: #1F2937;
+    --lower-text: #CEF9F2;
+    --box-highlights: #273549;
+    --upper-background: #AFC1D6;
+    --input-border: #CEF9F2;
     font-size: 62.5%;
 }
 
@@ -21,8 +21,7 @@ h1 {
 #unit-input {
     border: 2px solid var(--input-border);
     border-radius: 5px;
-    background-color: var(--bright-purple-background);
-    color: white;
+    background-color: var(--upper-background);
     padding: 0.5rem;
     font-size: 4rem;
     font-weight: bold;
@@ -54,13 +53,14 @@ body {
 }
 
 #input-container {
-    background-color: var(--bright-purple-background);
+    background-color: var(--upper-background);
     color: white;
     padding: 3rem;
+    text-shadow: black 0 0 2px;
 }
 
 #conversions-container {
-    background-color: var(--dark-gray-background);
+    background-color: var(--lower-background);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -71,11 +71,11 @@ body {
 }
 
 .unit-headers {
-    color: var(--purple-text);
+    color: var(--lower-text);
 }
 
 .unit-container {
-    background-color: var(--light-gray-box);
+    background-color: var(--box-highlights);
     padding: 2rem;
     border-radius: 5px;
     width: 100%;
