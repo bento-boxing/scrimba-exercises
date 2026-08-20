@@ -3,6 +3,11 @@ html, body {
     padding: 0;
 }
 
+.container {
+    width: 500px;
+    margin: auto;
+}
+
 /* Typography */
 
 body {
@@ -27,6 +32,7 @@ body {
 
 .logo {
     height: 70px;
+    cursor: pointer;
 }
 
 /* Avatar */
@@ -56,4 +62,40 @@ body {
 
 .post-info p {
     margin: 0;
+}
+
+.post-image {
+    width: 100%;
+}
+
+/* Post footer */
+.post-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    padding: 10px;
+}
+
+.reactions {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.reactions img {
+    cursor: pointer;
+    width: 25px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.comments .comment p {
+    margin: 0;
+    display: inline;
 }
