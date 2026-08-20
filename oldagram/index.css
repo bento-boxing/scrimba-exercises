@@ -18,6 +18,11 @@ body {
     font-weight: bold;
 }
 
+p {
+    margin: 0;
+    display: inline;
+}
+
 /* Navigation */
 
 .nav-list {
@@ -40,6 +45,12 @@ body {
 .avatar {
     border-radius: 50%;
     height: 50px;
+}
+
+
+/* Post */
+.post {
+    border-bottom: 40px solid lightgray;
 }
 
 /* Post Header */
@@ -73,7 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 10px;
+    gap: 4px;
     padding: 10px;
 }
 
@@ -93,9 +104,4 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-
-.comments .comment p {
-    margin: 0;
-    display: inline;
 }
