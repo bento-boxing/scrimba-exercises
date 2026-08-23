@@ -98,13 +98,6 @@ button{
     gap: 4px;
 }
 
-.tweet-reply{
-    border-top: 1px solid lightgray;
-    padding: 20px 0 0 0px;
-    margin: 10px 0 10px 40px;
-    width: 80%;
-}
-
 .handle{
     font-size: 12px;
     font-weight: 500;
@@ -116,6 +109,25 @@ button{
     width: 207px;
     font-size: 14px;
     line-height: 20px;
+}
+
+/* replies */
+
+.tweet-reply, .user-reply {
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0px;
+    margin: 10px 0 10px 40px;
+    width: 80%;
+}
+
+.reply-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.reply-clear-btn{
+    background-color: #999;
 }
 
 /* images */
