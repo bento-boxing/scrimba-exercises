@@ -1,9 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-       <link rel="stylesheet" href="index.css">
+        <title>Jimmy's Diner</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="index.css">
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
-	<script src="index.js"></script>
+    <header>
+        <h1>Jimmy's Diner</h1>
+        <p>The best burgers and pizzas in town</p>
+    </header>
+
+    <main>
+        <div id="item-cards" class="item-cards">
+
+        </div>
+    </main>
+
+    <footer>
+        <h2>Your order</h2>
+        <div id="order-history" class="order-history">
+            <div class="order-items">
+
+            </div>
+            <div class="order-total">
+
+            </div>
+        </div>
+
+        <button id="checkout">Complete order</button>
+    </footer>
+	<script src="index.js" type="module"></script>
     </body>
 </html>
 
