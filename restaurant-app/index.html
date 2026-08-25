@@ -23,6 +23,10 @@
         </div>
     </main>
 
+    <section id="order-outcome" class="order-outcome">
+
+    </section>
+
     <footer id="footer" class="footer hide">
         <h2>Your order</h2>
         <div id="order-history" class="order-history">
@@ -38,7 +42,7 @@
         <button class="checkout" id="checkout" data-action="completeOrder">Complete order</button>
     </footer>
 
-    <dialog id="card-details" class="card-details">
+    <dialog id="card-details" class="card-details" closedby="any">
         <div id="card-details-container" class="card-details-container">
             <div id="card-details-header" class="card-details-header">
                 <h2>Enter card details</h2>
@@ -47,20 +51,20 @@
             <form id="card-form" class="card-form">
                 <div class="card-form-container">
                     <label for="card-name">Full Name on Card</label>
-                    <input type="text" id="card-name" pattern="[a-zA-Z ]*" placeholder="e.g. John Smith" required>
+                    <input type="text" id="card-name" name='card-name' pattern="[a-zA-Z ]*" placeholder="e.g. John Smith" required>
                 </div>
 
                 <div class="card-form-container">
                     <label for="card-number">Card Number</label>
-                    <input type="number" id="card-number" pattern="[0-9]*" placeholder="e.g. 1234 5678 9000 0000" required>
+                    <input type="text" id="card-number" name="card-number" pattern="[0-9]*" placeholder="e.g. 1234 5678 9000 0000" minlength="10" maxlength="20" required>
                 </div>
 
                 <div class="card-form-container">
                     <label for="cvv">CVV</label>
-                    <input type="number" id="cvv" placeholder="e.g. 123" required pattern="[0-9]{3}">
+                    <input type="text" id="cvv" name="cvv" placeholder="e.g. 123" minlength="3" maxlength="3" required pattern="[0-9]{3}">
                 </div>
 
-                <button type="submit" class="pay" id="pay">Pay</button>
+                <button type="submit" class="pay" id="pay" data-action="submitPayment">Pay</button>
             </form>
         </div>
     </dialog>

@@ -1,4 +1,4 @@
-export { renderCards, renderCart, renderCardDetailsModal }
+export { renderCards, renderCart, renderCardDetailsModal, renderSuccessfulPayment, renderFailedPayment }
 
 const itemCards = document.getElementById('item-cards')
 
@@ -44,4 +44,25 @@ function renderCart(cart) {
 
 function renderCardDetailsModal() {
     document.getElementById('card-details').showModal()
+}
+
+function renderSuccessfulPayment() {
+    document.getElementById('order-outcome').innerHTML = `
+    <h2 id="successful-payment" class="successful payment">Thanks, your order is on its way!</h2>`
+
+    document.getElementById('footer').classList.add('hide')
+    disableButtons()
+}
+
+function renderFailedPayment() {
+    document.getElementById('order-outcome').innerHTML = `
+    <h2 id="failed-payment" class="failed payment">Something went wrong, please reload the page to try again!</h2>`
+
+    document.getElementById('footer').classList.add('hide')
+    disableButtons()
+}
+
+function disableButtons() {
+    let buttons = Array.from(document.getElementsByTagName('button'))
+    buttons.forEach(button => button.disabled = true)
 }

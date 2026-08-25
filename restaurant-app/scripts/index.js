@@ -1,17 +1,17 @@
 import menuArray from './menuArray.js'
-import { renderCards, renderCart, renderCardDetailsModal } from './renderLogic.js'
+import { renderCards, renderCart, renderCardDetailsModal, renderSuccessfulPayment, renderFailedPayment } from './renderLogic.js'
 import { addToCart, removeFromCart, getCartData } from './cartLogic.js'
-import { closeCardDetailsModal } from './cardDetailsLogic.js'
+import { submitPayment, closeCardDetailsModal } from './cardDetailsLogic.js'
 
 const userActions = {
-    addToCart : function(target) {
-        addToCart(target.dataset.id)
+    addToCart : function(event) {
+        addToCart(event.target.dataset.id)
 
         const updatedCart = getCartData()
         renderCart(updatedCart)
     },
-    removeFromCart : function(target) {
-        removeFromCart(target.dataset.id)
+    removeFromCart : function(event) {
+        removeFromCart(event.target.dataset.id)
 
         const updatedCart = getCartData()
         renderCart(updatedCart)
@@ -21,6 +21,15 @@ const userActions = {
     },
     closeCardDetailsModal : function() {
         closeCardDetailsModal()
+    },
+    submitPayment : function(event) {
+        const ifPaid = submitPayment(event)
+        if (ifPaid) {
+            closeCardDetailsModal()
+            renderSuccessfulPayment()
+        } else {
+            renderFailedPayment()
+        }
     }
 }
 
@@ -30,6 +39,6 @@ document.addEventListener('click', event => {
     const action = event.target.dataset.action
 
     if (userActions[action]) {
-        userActions[action](event.target)
+        userActions[action](event)
     }
 })
