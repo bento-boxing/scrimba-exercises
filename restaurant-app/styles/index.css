@@ -3,9 +3,16 @@
     box-sizing: border-box;
 }
 
+/* Global styles */
 body {
     font-family: 'Smythe', serif;
 }
+
+button {
+    cursor: pointer;
+}
+
+/* Header styles */
 
 header {
     background-image: url("../images/burger-banner.jpg");
@@ -84,16 +91,6 @@ footer {
     text-align: center;
 }
 
-footer .checkout {
-    width: 100%;
-    background-color: #16DB99;
-    color: white;
-    border: none;
-    padding: 16px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
 footer .order-items {
     display: flex;
     flex-direction: column;
@@ -118,6 +115,69 @@ footer .order-total, .order-item {
 footer .order-total {
     padding-top: 16px;
     border-top: 2px solid black;
+}
+
+.checkout, .pay {
+    width: 100%;
+    background-color: #16DB99;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Card Details Modal styling */
+.card-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 600px;
+
+    z-index: 1;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: black 0 0 100px;
+    font-family: arial, sans-serif;
+}
+
+.card-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-details-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+
+.close {
+    margin: auto 0 auto auto;
+    background-color: transparent;
+    color: #555555;
+    width: 40px;
+    border: none;
+    font-weight: bold;
+}
+
+.card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* Utility class */

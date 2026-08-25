@@ -1,4 +1,4 @@
-export { renderCards, renderCart}
+export { renderCards, renderCart, renderCardDetailsModal }
 
 const itemCards = document.getElementById('item-cards')
 
@@ -29,7 +29,7 @@ function renderCart(cart) {
         finalHtml += `
                     <div class="order-item">
                     <h3>${newOrderItem.name} (x${newOrderItem.quantity})</h3>
-                    <button type="button" data-order-id="${newOrderItem.id}">remove</button>
+                    <button type="button" data-action="removeFromCart" data-id="${newOrderItem.id}">remove</button>
                     <p>$${newOrderItem.price * newOrderItem.quantity}</p>
                 </div>`
     })
@@ -37,9 +37,11 @@ function renderCart(cart) {
     document.getElementById('order-items').innerHTML = finalHtml
     const footer = document.getElementById('footer')
 
-    if (footer.classList.contains('hide')) {
-        footer.classList.remove('hide')
-    }
+    cart.length > 0 ? footer.classList.remove('hide') : footer.classList.add('hide')
 
     footer.querySelector('#order-total-price').textContent = '$' + cart.reduce((total, item) => total + item.price * item.quantity, 0)
+}
+
+function renderCardDetailsModal() {
+    document.getElementById('card-details').showModal()
 }

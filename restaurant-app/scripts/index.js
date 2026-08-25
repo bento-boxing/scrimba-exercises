@@ -1,6 +1,7 @@
 import menuArray from './menuArray.js'
-import { renderCards, renderCart } from './renderLogic.js'
+import { renderCards, renderCart, renderCardDetailsModal } from './renderLogic.js'
 import { addToCart, removeFromCart, getCartData } from './cartLogic.js'
+import { closeCardDetailsModal } from './cardDetailsLogic.js'
 
 const userActions = {
     addToCart : function(target) {
@@ -15,6 +16,12 @@ const userActions = {
         const updatedCart = getCartData()
         renderCart(updatedCart)
     },
+    completeOrder : function() {
+        renderCardDetailsModal()
+    },
+    closeCardDetailsModal : function() {
+        closeCardDetailsModal()
+    }
 }
 
 renderCards(menuArray)
@@ -26,4 +33,3 @@ document.addEventListener('click', event => {
         userActions[action](event.target)
     }
 })
-
