@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -79,4 +80,38 @@ footer {
     text-align: center;
 }
 
-footer
+footer .checkout {
+    width: 100%;
+    background-color: #16DB99;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer .order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+footer .order-item button {
+    margin-right: auto;
+    border: none;
+    color: #555555;
+    background-color: transparent;
+}
+
+footer .order-total, .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .order-total {
+    padding-top: 16px;
+    border-top: 2px solid black;
+}
