@@ -7,7 +7,7 @@ export default [
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
-            { type: "heroImage", alt: "A laptop in front of a window looking at a sunset, illuminated by a ring lamp." },
+            { type: "heroImage", alt: "A drawing of a lightbulb on a sticky note, pinned to a cork board.", src: "../images/blog-one-cover.jpg"},
             { type: "subtitle", text:"How I stay committed to learning"},
             { type: "paragraph", text: "I like to think of myself as a lifelong learner. I used to spend hours and hours learning, then try to create simple projects using what I learned or work new techniques into existing projects." },
             { type: "paragraph", text: "While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world." },
@@ -24,7 +24,7 @@ export default [
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
-            { type: "heroImage", alt: "A laptop in front of a window looking at a sunset, illuminated by a ring lamp." },
+            { type: "heroImage", alt: "A bridge in Venice with a river boat crossing under it.", src: "../images/blog-two-cover.jpg"},
             { type: "subtitle", text:"How I stay committed to learning"},
             { type: "paragraph", text: "I like to think of myself as a lifelong learner. I used to spend hours and hours learning, then try to create simple projects using what I learned or work new techniques into existing projects." },
             { type: "paragraph", text: "While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world." },
@@ -41,7 +41,7 @@ export default [
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
-            { type: "heroImage", alt: "A laptop in front of a window looking at a sunset, illuminated by a ring lamp." },
+            { type: "heroImage", alt: "A red canyon with a yellow van driving beneath it.", src: "../images/blog-three-cover.jpg"},
             { type: "subtitle", text:"How I stay committed to learning"},
             { type: "paragraph", text: "I like to think of myself as a lifelong learner. I used to spend hours and hours learning, then try to create simple projects using what I learned or work new techniques into existing projects." },
             { type: "paragraph", text: "While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world." },
@@ -58,7 +58,7 @@ export default [
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
-            { type: "heroImage", alt: "A laptop in front of a window looking at a sunset, illuminated by a ring lamp." },
+            { type: "heroImage", alt: "A laptop in a dark room, illuminated by a ring lamp.", src: "../images/blog-four-cover.jpg"},
             { type: "subtitle", text:"How I stay committed to learning"},
             { type: "paragraph", text: "I like to think of myself as a lifelong learner. I used to spend hours and hours learning, then try to create simple projects using what I learned or work new techniques into existing projects." },
             { type: "paragraph", text: "While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world." },
@@ -75,7 +75,7 @@ export default [
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
-            { type: "heroImage", alt: "A laptop in front of a window looking at a sunset, illuminated by a ring lamp." },
+            { type: "heroImage", alt: "A laptop in an office with code on it.", src: "../images/blog-five-cover.jpg"},
             { type: "subtitle", text:"How I stay committed to learning"},
             { type: "paragraph", text: "I like to think of myself as a lifelong learner. I used to spend hours and hours learning, then try to create simple projects using what I learned or work new techniques into existing projects." },
             { type: "paragraph", text: "While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world." },
@@ -92,7 +92,7 @@ export default [
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
-            { type: "heroImage", alt: "A laptop in front of a window looking at a sunset, illuminated by a ring lamp." },
+            { type: "heroImage", alt: "A screen full of code.", src: "../images/blog-six-cover.jpg"},
             { type: "subtitle", text:"How I stay committed to learning"},
             { type: "paragraph", text: "I like to think of myself as a lifelong learner. I used to spend hours and hours learning, then try to create simple projects using what I learned or work new techniques into existing projects." },
             { type: "paragraph", text: "While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world." },
