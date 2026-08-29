@@ -1,17 +1,19 @@
 import articlesArray from './articlesArray.js'
 import { renderPage, renderMoreArticles } from './renderIndex.js'
 
-renderPage(articlesArray)
+const postArray = articlesArray.filter(article => article.type === 'post')
 
-let nextIndexToAdd = articlesArray.length - 5
+renderPage(postArray)
+
+let nextIndexToAdd = postArray.length - 5
 
 document.getElementById('view-more').addEventListener('click', event => {
     event.preventDefault()
     let startIndex = nextIndexToAdd - 3
-    if( startIndex < 0 ) {
+    if( startIndex <= 0 ) {
         startIndex = 0
         document.getElementById('view-more').style.display = 'none'
     }
 
-    renderMoreArticles(articlesArray.slice(startIndex, nextIndexToAdd + 1).reverse())
+    renderMoreArticles(postArray.slice(startIndex, nextIndexToAdd + 1).reverse())
 })

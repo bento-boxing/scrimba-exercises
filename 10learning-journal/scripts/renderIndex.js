@@ -6,17 +6,26 @@ function renderPage(articlesArray) {
 }
 
 function renderDefaultArticles(articlesArray, numberOfArticles) {
+    const heroContainer = document.getElementById("hero-article-container")
+    const nonHeroContainer = document.getElementById("non-hero-articles-container")
+    let renderedArticles = 0
+
     // Assuming that the latest article should be the hero article, and articles are pushed to the end
     // of the articles array when added.
-    let heroArticleHtml = getHeroArticleHtml(articlesArray[articlesArray.length - 1])
-    let articlesHtml = ""
-    // To get articles from newest to oldest.
-    for (let i = articlesArray.length - 2; i >= articlesArray.length - 1 - numberOfArticles; i--) {
-        articlesHtml += getArticleHtml(articlesArray[i])
+    if (heroContainer) {
+        heroContainer.innerHTML = getHeroArticleHtml(articlesArray[articlesArray.length - 1])
+        renderedArticles ++
     }
 
-    document.getElementById("hero-article-container").innerHTML = heroArticleHtml
-    document.getElementById("non-hero-articles-container").innerHTML = articlesHtml
+    if (nonHeroContainer) {
+        let articlesHtml = ""
+        // To get articles from newest to oldest.
+        for (let i = articlesArray.length - 1 - renderedArticles; i >= articlesArray.length - 1 - numberOfArticles; i--) {
+            articlesHtml += getArticleHtml(articlesArray[i])
+        }
+
+        nonHeroContainer.innerHTML = articlesHtml
+    }
 }
 
 function renderMoreArticles(moreArticlesArray) {
