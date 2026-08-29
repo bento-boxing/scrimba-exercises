@@ -1,9 +1,13 @@
 export default [
     {
         title: "Blog one",
-        date: "2022/07/23",
-        coverImage: "../images/blog-one-cover.jpg",
+        date: "2022-07-23",
+        coverImage: {
+            url: "../images/blog-one-cover.jpg",
+            alt: "A drawing of a lightbulb on a sticky note, pinned to a cork board."
+            },
         caption: "I'm excited to start a new learning journey as a Scrimba student! After several months of learning in the Frontend Developer Career Path.",
+        url: "./pages/posts/blog-one.html",
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
@@ -18,9 +22,13 @@ export default [
     },
     {
         title: "Blog two",
-        date: "2022/07/23",
-        coverImage: "../images/blog-two-cover.jpg",
+        date: "2022-07-23",
+        coverImage: {
+            url: "../images/blog-two-cover.jpg",
+            alt: "A bridge in Venice with a river boat crossing under it."
+        },
         caption: "I'm excited to start a new learning journey as a Scrimba student! After several months of learning in the Frontend Developer Career Path.",
+        url: "./pages/posts/blog-two.html",
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
@@ -35,9 +43,13 @@ export default [
     },
     {
         title: "Blog three",
-        date: "2022/07/23",
-        coverImage: "../images/blog-three-cover.jpg",
+        date: "2022-07-23",
+        coverImage: {
+            url: "../images/blog-three-cover.jpg",
+            alt: "A red canyon with a yellow van driving beneath it."
+        },
         caption: "I'm excited to start a new learning journey as a Scrimba student! After several months of learning in the Frontend Developer Career Path.",
+        url: "./pages/posts/blog-three.html",
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
@@ -52,9 +64,13 @@ export default [
     },
     {
         title: "Blog four",
-        date: "2022/07/23",
-        coverImage: "../images/blog-four-cover.jpg",
+        date: "2022-07-23",
+        coverImage: {
+            url: "../images/blog-four-cover.jpg",
+            alt: "A laptop in a dark room, illuminated by a ring lamp."
+        },
         caption: "I'm excited to start a new learning journey as a Scrimba student! After several months of learning in the Frontend Developer Career Path.",
+        url: "./pages/posts/blog-four.html",
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
@@ -69,9 +85,13 @@ export default [
     },
     {
         title: "Blog five",
-        date: "2022/07/23",
-        coverImage: "../images/blog-five-cover.jpg",
+        date: "2022-07-23",
+        coverImage: {
+            url: "../images/blog-five-cover.jpg",
+            alt: "A laptop in an office with code on it."
+        },
         caption: "I'm excited to start a new learning journey as a Scrimba student! After several months of learning in the Frontend Developer Career Path.",
+        url: "./pages/posts/blog-five.html",
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
@@ -86,9 +106,13 @@ export default [
     },
     {
         title: "Blog six",
-        date: "2022/07/23",
-        coverImage: "../images/blog-six-cover.jpg",
-        caption: "I'm excited to start a new learning journey as a Scrimba student! After several months of learning in the Frontend Developer Career Path.",
+        date: "2022-07-23",
+        coverImage: {
+            url: "../images/blog-six-cover.jpg",
+            alt: "A screen full of code."
+        },
+        caption: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.",
+        url: "./pages/posts/blog-six.html",
         body: [
             { type: "header", text: "My new journey as a Scrimba student"},
             { type: "paragraph", text: "After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers." },
