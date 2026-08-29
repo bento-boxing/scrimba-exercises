@@ -58,7 +58,7 @@ footer p {
 
 .article-caption {
     font-size: 1rem;
-    max-width: 48rem;
+    max-width: 550px;
 }
 
 /* Navigation bar */
@@ -135,7 +135,7 @@ footer p {
 
 .hero .article-text-container {
     position: absolute;
-    bottom: 0;
+    inset: 0;
     padding: 2em;
 }
 
@@ -144,12 +144,15 @@ footer p {
     padding: 2em;
     display: grid;
     grid-auto-columns: minmax(30vh, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
     gap: 1em;
 }
 
 .article-image {
     display: block;
     width: 100%;
+    max-width: 550px;
     height: 350px;
     object-fit: cover;
     border-radius: 5px;
