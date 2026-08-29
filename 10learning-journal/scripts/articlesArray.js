@@ -105,7 +105,7 @@ export default [
         ]
     },
     {
-        title: "Blog six",
+        title: "My new journey as a bootcamp student.",
         date: "2022-07-23",
         coverImage: {
             url: "../images/blog-six-cover.jpg",

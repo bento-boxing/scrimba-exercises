@@ -1,4 +1,17 @@
 import articlesArray from './articlesArray.js'
-import { renderPage } from './renderIndex.js'
+import { renderPage, renderMoreArticles } from './renderIndex.js'
 
 renderPage(articlesArray)
+
+let nextIndexToAdd = articlesArray.length - 5
+
+document.getElementById('view-more').addEventListener('click', event => {
+    event.preventDefault()
+    let startIndex = nextIndexToAdd - 3
+    if( startIndex < 0 ) {
+        startIndex = 0
+        document.getElementById('view-more').style.display = 'none'
+    }
+
+    renderMoreArticles(articlesArray.slice(startIndex, nextIndexToAdd + 1).reverse())
+})
