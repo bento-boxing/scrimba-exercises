@@ -2,7 +2,11 @@ export { renderPage, renderMoreArticles }
 
 function renderPage(articlesArray) {
     renderDefaultArticles(articlesArray, 3)
-    renderCopyrightYear(document.getElementById('copyright-year'))
+
+    const copyrightElement = document.getElementById('copyright-year')
+    if (copyrightElement) {
+        renderCopyrightYear(copyrightElement)
+    }
 }
 
 function renderDefaultArticles(articlesArray, numberOfArticles) {
