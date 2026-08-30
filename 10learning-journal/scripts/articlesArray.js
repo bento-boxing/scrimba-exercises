@@ -18,6 +18,16 @@ export default [
         ]
     },
     {
+        id: "page-not-found",
+        title: "Page Not Found",
+        date: "2022-07-23",
+        url: "./post.html?id=page-not-found",
+        type: "page-not-found",
+        body: [
+            { type: 'header', text: 'Error 404: Page Not Found.'},
+        ]
+    },
+    {
         id: "blog-one",
         title: "Blog one",
         date: "2022-07-23",
