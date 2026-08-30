@@ -2,7 +2,6 @@ export default [
     {
         id: "about-me",
         title: "About Me",
-        date: "2022-07-23",
         url: "./post.html?id=about-me",
         type: "about-me",
         body: [
@@ -20,7 +19,6 @@ export default [
     {
         id: "page-not-found",
         title: "Page Not Found",
-        date: "2022-07-23",
         url: "./post.html?id=page-not-found",
         type: "page-not-found",
         body: [

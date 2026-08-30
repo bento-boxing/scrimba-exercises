@@ -5,7 +5,11 @@ export function renderPost(articleData) {
     const date = new Date(articleData.date)
 
     article.classList.add('post')
-    let articleHtml = `<p class="small upper">${date.toDateString().substring(4)}</p>`
+    let articleHtml = ""
+
+    if (articleData.date) {
+        articleHtml += `<p class="small upper">${date.toDateString().substring(4)}</p>`
+    }
 
     for(let bodyPart of articleData.body) {
         switch(bodyPart.type) {
