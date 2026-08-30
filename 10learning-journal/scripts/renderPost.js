@@ -33,4 +33,6 @@ export function renderPost(articleData) {
 
     article.innerHTML = articleHtml
     postContainer.appendChild(article)
+
+    document.title = articleData.title
 }
