@@ -20,6 +20,7 @@ document.getElementById('submit').addEventListener('click', (e) => {
 function insertColour(hex) {
     const chosenColourItem = document.createElement('div')
     chosenColourItem.classList.add('chosen-colours__item')
+    chosenColourItem.setAttribute('data-colour', hex)
 
     const chosenColourItemColour = document.createElement('div')
     chosenColourItemColour.classList.add('chosen-colours__item__colour')
