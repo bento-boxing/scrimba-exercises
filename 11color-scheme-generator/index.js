@@ -8,15 +8,14 @@ document.getElementById('submit').addEventListener('click', (e) => {
     fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor.value.substring(1)}&mode=${colorScheme.value}&count=4`)
         .then(res => res.json())
         .then(coloursObject => {
-            document.createElement('div')
-            insertColour(baseColor.value)
-
             for (const colour of coloursObject.colors) {
-
+                insertColour(colour.hex.value)
+                console.log(colour.hex.value)
             }
         })
 })
 
+// This function NEEDS the hex with hashtag!
 function insertColour(hex) {
     const chosenColourItem = document.createElement('div')
     chosenColourItem.classList.add('chosen-colours__item')
