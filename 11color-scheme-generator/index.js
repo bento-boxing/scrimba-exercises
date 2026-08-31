@@ -19,14 +19,14 @@ document.getElementById('submit').addEventListener('click', (e) => {
 
 function insertColour(hex) {
     const chosenColourItem = document.createElement('div')
-    chosenColourItem.classList.add('chosen-colour__item')
+    chosenColourItem.classList.add('chosen-colours__item')
 
     const chosenColourItemColour = document.createElement('div')
-    chosenColourItemColour.classList.add('chosen-colour__item__colour')
+    chosenColourItemColour.classList.add('chosen-colours__item__colour')
     chosenColourItemColour.style.backgroundColor = hex
 
     const chosenColourItemText = document.createElement('p')
-    chosenColourItemText.classList.add('chosen-colour__item__text')
+    chosenColourItemText.classList.add('chosen-colours__item__text')
     chosenColourItemText.textContent = hex
 
     chosenColourItem.appendChild(chosenColourItemColour)
