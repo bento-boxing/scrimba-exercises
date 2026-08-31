@@ -60,10 +60,9 @@ body {
 
 .chosen-colours {
     display: grid;
-    grid-auto-columns: minmax(40px, 1fr);
+    grid-auto-flow: column;
     width: 100%;
     padding: 2em 0;
-
 }
 
 .chosen-colours__item {
