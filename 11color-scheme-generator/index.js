@@ -16,6 +16,12 @@ document.getElementById('submit').addEventListener('click', (e) => {
         })
 })
 
+document.addEventListener('click', (e) => {
+    if(e.target.classList.contains('chosen-colours__item')) {
+        navigator.clipboard.writeText(e.target.dataset.colour)
+    }
+})
+
 // This function NEEDS the hex with hashtag!
 function insertColour(hex) {
     const chosenColourItem = document.createElement('div')
