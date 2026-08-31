@@ -8,6 +8,7 @@ document.getElementById('submit').addEventListener('click', (e) => {
     fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor.value.substring(1)}&mode=${colorScheme.value}&count=4`)
         .then(res => res.json())
         .then(coloursObject => {
+            chosenColours.replaceChildren()
             for (const colour of coloursObject.colors) {
                 insertColour(colour.hex.value)
                 console.log(colour.hex.value)
