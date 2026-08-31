@@ -59,7 +59,8 @@ body {
 }
 
 .chosen-colours {
-    display: flex;
+    display: grid;
+    grid-auto-columns: minmax(40px, 1fr);
     width: 100%;
     padding: 2em 0;
 
