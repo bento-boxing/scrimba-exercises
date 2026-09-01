@@ -12,6 +12,11 @@
     padding: 0;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background-color: var(--primary-bg-color);
 }
@@ -90,4 +95,24 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     padding: 0.75em 2em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.movie-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3em;
+    min-height: 75vh;
+}
+
+.movie-results__placeholder-icon {
+    font-size: 4em;
+    color: var(--secondary-font-color);
+}
+
+.movie-results__placeholder-text {
+    font-size: 2em;
+    color: var(--secondary-font-color);
 }
