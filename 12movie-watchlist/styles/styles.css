@@ -1,0 +1,16 @@
+:root {
+    --primary-bg-color: #121212;
+    --primary-font-color: #FFFFFF;
+    --secondary-font-color: #9CA3AF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-bg-color);
+}
