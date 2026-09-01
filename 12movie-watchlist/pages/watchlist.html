@@ -9,13 +9,35 @@
     <title>My Watchlist</title>
 
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+<header class="header">
+    <h1 class="header__title">Find your film</h1>
+    <a href="../index.html" class="header__link">Search for movies</a>
+</header>
 
+<form class="movie-searchbar">
+    <div class="movie-searchbar__search-section">
+        <label for="movie-searchbar__search-section__input" class="movie-searchbar__search-section__label">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+        <input id="movie-searchbar__search-section__input" class="movie-searchbar__search-section__input" type="search" placeholder="e.g. Blade Runner">
+    </div>
+
+    <button type="submit" class="movie-searchbar__button">Search</button>
+</form>
+
+<section class="movie-results">
+    <p class="movie-results__placeholder-text">Your watchlist is looking a little empty...</p>
+    <button class="movie-results__prompt">
+        <i class="fa-solid fa-circle-plus movie-results__prompt-icon"></i>
+        Let's add some movies!
+    </button>
+</section>
 </body>
 </html>
