@@ -9,11 +9,28 @@
     <title>Find your Film</title>
 
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <h1 class="header__title">Find your film</h1>
+        <a href="./pages/watchlist.html" class="header__link">My Watchlist</a>
+    </header>
 
+    <form class="movie-searchbar">
+        <label for="movie-searchbar__input" class="movie-searchbar__label">Search movies...</label>
+        <input id="movie-searchbar__input" class="movie-searchbar__input" type="search" placeholder="e.g. Blade Runner">
+
+        <button type="submit" class="movie-searchbar__button">Search</button>
+    </form>
+
+    <section class="movie-results">
+        <i class="fa-solid fa-clapperboard movie-results__placeholder-icon"></i>
+        <p class="movie-results__placeholder-text">Start exploring</p>
+    </section>
 </body>
 </html>
