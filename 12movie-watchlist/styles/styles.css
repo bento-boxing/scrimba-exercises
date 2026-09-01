@@ -1,6 +1,7 @@
 :root {
     --primary-bg-color: #121212;
     --secondary-bg-color: #2E2E2F;
+    --button-bg-color: #4B4B4B;
     --primary-font-color: #FFFFFF;
     --secondary-font-color: #9CA3AF;
 }
@@ -12,10 +13,14 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--primary-font-color);
     background-color: var(--primary-bg-color);
 }
+
+p, h1, h2, h3, h4, h5, h6, span, a, li {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-font-color);
+}
+
 
 .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/images/movie-posters.jpg');
@@ -41,4 +46,48 @@ body {
     font-weight: bold;
     padding: 1em;
     cursor: pointer;
+}
+
+.movie-searchbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -20px;
+    padding: 0 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-searchbar__search-section {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-font-color);
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    width: 60vw;
+
+    padding: 0 0.75em;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.movie-searchbar__search-section__input {
+    background-color: transparent;
+    padding: 0.75em 0;
+    width: 100%;
+    border: none;
+}
+
+.movie-searchbar__button {
+    background-color: var(--button-bg-color);
+    color: var(--primary-font-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.75em 2em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
