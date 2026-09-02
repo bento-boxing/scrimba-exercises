@@ -11,25 +11,27 @@ async function handleFormSubmission(event) {
     const searchJson = await response.json()
 
     if (searchJson.Response === "False") {
-        const errorText = document.createElement('p')
-        errorText.classList.add('movie-results__placeholder-text')
-        errorText.textContent = "Unable to find what you're looking for. Please try another search."
-
-        movieResults.replaceChildren(errorText)
-        return
+        displayErrorText();
     }
 
-    const detailedMoviePromises = searchJson.Search.map(async (movie) => {
-        const detailedResponse = await fetch(`http://www.omdbapi.com/?apikey=5e751dc7&i=${movie.imdbID}`)
-        return detailedResponse.json()
-    })
-
+    const detailedMoviePromises = getDetailedMoviePromises(searchJson.Search)
     const detailedMovieData = await Promise.all(detailedMoviePromises)
 
-    console.log(detailedMovieData)
+    const movieHtml = detailedMovieData.map(movie => getMovieHtml(movie))
 
-    let movieHtml = detailedMovieData.map(movie => {
-        return `<article class="movie-results__item movie">
+    movieResults.innerHTML = movieHtml.join(`<hr class="movie-results__break">`)
+}
+
+function displayErrorText() {
+    const errorText = document.createElement('p')
+    errorText.classList.add('movie-results__placeholder-text')
+    errorText.textContent = "Unable to find what you're looking for. Please try another search."
+
+    movieResults.replaceChildren(errorText)
+}
+
+function getMovieHtml(movie) {
+    return `<article class="movie-results__item movie">
                     <img class="movie__image" src="${movie.Poster}" alt="A poster of the movie ${movie.Title}">
                     <div class="movie__details">
                         <div class="movie__header">
@@ -50,7 +52,11 @@ async function handleFormSubmission(event) {
                     </div>
                 </article>
                 `
-    })
+}
 
-    movieResults.innerHTML = movieHtml.join(`<hr class="movie-results__break">`)
+function getDetailedMoviePromises(movieArray) {
+    return movieArray.map(async (movie) => {
+        const detailedResponse = await fetch(`http://www.omdbapi.com/?apikey=5e751dc7&i=${movie.imdbID}`)
+        return detailedResponse.json()
+    });
 }
