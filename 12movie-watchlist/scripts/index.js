@@ -1,7 +1,12 @@
+export { getMovieHtml }
+
 const form = document.getElementById('movie-searchbar')
 const movieResults = document.getElementById('movie-results')
+let currentMovies = []
 
-form.addEventListener('submit', handleFormSubmission)
+if(form) {
+    form.addEventListener('submit', handleFormSubmission)
+}
 
 async function handleFormSubmission(event) {
     event.preventDefault()
@@ -16,6 +21,7 @@ async function handleFormSubmission(event) {
 
     const detailedMoviePromises = getDetailedMoviePromises(searchJson.Search)
     const detailedMovieData = await Promise.all(detailedMoviePromises)
+    currentMovies = await detailedMovieData
 
     const movieHtml = detailedMovieData.map(movie => getMovieHtml(movie))
 
@@ -31,7 +37,7 @@ function displayErrorText() {
 }
 
 function getMovieHtml(movie) {
-    return `<article class="movie-results__item movie">
+    return `<article class="movie-results__item movie" data-imdb-id="${movie.imdbID}">
                     <img class="movie__image" src="${movie.Poster}" alt="A poster of the movie ${movie.Title}">
                     <div class="movie__details">
                         <div class="movie__header">
@@ -45,7 +51,7 @@ function getMovieHtml(movie) {
                             <p class="movie_tags">${movie.Genre}</p>
                             <button class="movie__watchlist watchlist">
                                 <i class="fa-solid fa-circle-plus watchlist__add"></i>
-                                Watchlist
+                                Add to Watchlist
                             </button>                        
                         </div>
                         <p class="movie__description">${movie.Plot}</p>
@@ -60,3 +66,34 @@ function getDetailedMoviePromises(movieArray) {
         return detailedResponse.json()
     });
 }
+
+function addToWatchlist(target) {
+    const imdbID = target.closest('.movie').dataset.imdbId
+
+    const movieToSave = currentMovies.find(movie => movie.imdbID === imdbID)
+    let watchlist = JSON.parse(localStorage.getItem('watchlist')) || []
+    const watchlistedIds = watchlist.map(movie => movie.imdbID)
+
+    if(!watchlistedIds.includes(movieToSave.imdbID)) {watchlist.push(movieToSave)}
+    localStorage.setItem('watchlist', JSON.stringify(watchlist))
+
+    styleAddToWatchlistButton(target)
+}
+
+function styleAddToWatchlistButton(watchListButton) {
+    const icon = document.createElement('i')
+    icon.classList.add('fa-solid', 'fa-circle-check', 'watchlist__add', 'watchlist--success')
+
+    watchListButton.classList.add('watchlist--success')
+    watchListButton.disabled = true
+
+    watchListButton.replaceChildren(icon, "Added!")
+}
+
+document.addEventListener('click', event => {
+    const target = event.target
+
+    if(target.classList.contains('watchlist')) {
+        addToWatchlist(target);
+    }
+})
