@@ -21,18 +21,7 @@
     <a href="../index.html" class="header__link">Search for movies</a>
 </header>
 
-<form class="movie-searchbar">
-    <div class="movie-searchbar__search-section">
-        <label for="movie-searchbar__input" class="movie-searchbar__label">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </label>
-        <input id="movie-searchbar__input" class="movie-searchbar__input" type="search" placeholder="e.g. Blade Runner">
-    </div>
-
-    <button type="submit" class="movie-searchbar__button">Search</button>
-</form>
-
-<section class="movie-results">
+<section class="movie-results" id="movie-results">
     <div class="movie-results__placeholder">
         <p class="movie-results__placeholder-text">Your watchlist is looking a little empty...</p>
         <a class="movie-results__prompt" href="../index.html">
@@ -41,5 +30,6 @@
         </a>
     </div>
 </section>
+<script src="../scripts/watchlist.js" type="module"></script>
 </body>
 </html>
