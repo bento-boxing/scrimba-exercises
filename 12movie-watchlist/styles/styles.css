@@ -101,11 +101,18 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 1em;
+    gap: 2em;
 
     padding: 3em;
     min-height: 75vh;
+}
+
+.movie-results__placeholder {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
 }
 
 .movie-results__placeholder-icon {
@@ -126,6 +133,7 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
 
     font-size: 1.25em;
     font-weight: bold;
+    text-decoration: none;
     color: var(--primary-font-color);
 
     background-color: transparent;
@@ -149,6 +157,7 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
 .movie__image {
     min-width: 120px;
     max-width: 15vw;
+    color: var(--primary-font-color);
 }
 
 .movie__details {
