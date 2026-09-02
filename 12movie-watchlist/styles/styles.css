@@ -4,6 +4,8 @@
     --button-bg-color: #4B4B4B;
     --primary-font-color: #FFFFFF;
     --secondary-font-color: #9CA3AF;
+
+    --success-font-color: #008000;
 }
 
 * {
@@ -26,6 +28,13 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     color: var(--primary-font-color);
 }
 
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
 
 .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/images/movie-posters.jpg');
@@ -92,7 +101,6 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     background-color: var(--button-bg-color);
     color: var(--primary-font-color);
     border: none;
-    cursor: pointer;
     padding: 0.75em 2em;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -101,7 +109,6 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
 .movie-results {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 2em;
 
     padding: 3em;
@@ -109,7 +116,7 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
 }
 
 .movie-results__placeholder {
-    align-self: center;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,6 +136,8 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
 }
 
 .movie-results__prompt {
+    margin: auto;
+
     display: flex;
     gap: 0.5em;
     align-items: center;
@@ -141,8 +150,6 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     background-color: transparent;
     border: none;
     padding: 0.75em 0;
-
-    cursor: pointer;
 }
 
 .movie-results__prompt-icon {
@@ -158,7 +165,7 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
 
 .movie__image {
     min-width: 120px;
-    max-width: 15vw;
+    max-width: 10vw;
     color: var(--primary-font-color);
 }
 
@@ -185,11 +192,19 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     color: var(--primary-font-color);
     border: none;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
 }
 
 .watchlist__add {
     color: var(--primary-font-color);
     font-size: 1.25em;
+}
+
+.watchlist--success {
+    color: var(--success-font-color);
 }
 
 .movie__description {
