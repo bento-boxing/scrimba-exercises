@@ -28,14 +28,29 @@ async function handleFormSubmission(event) {
 
     console.log(detailedMovieData)
 
-    // let movieHtml = detailedMovieData.map(movie => {
-    //     return `<article class="movie-results__item movie">
-    //                 <img class="movie__image" src="${movie.Poster}" alt="A poster of the movie ${movie.Title}">
-    //                 <div class="movie__details">
-    //                     <h2 class="movie__title">${movie.Title}</h2>
-    //
-    //                 </div>
-    //             </article>
-    //             `
-    // })
+    let movieHtml = detailedMovieData.map(movie => {
+        return `<article class="movie-results__item movie">
+                    <img class="movie__image" src="${movie.Poster}" alt="A poster of the movie ${movie.Title}">
+                    <div class="movie__details">
+                        <div class="movie__header">
+                            <h2 class="movie__title">${movie.Title}</h2>
+                            <p class="movie__star">⭐</p>
+                            <p class="movie__rating">${movie.imdbRating}</p>
+                        </div>
+                        
+                        <div class="movie__minor-details">
+                            <p class="movie__runtime">${movie.Runtime}</p>
+                            <p class="movie_tags">${movie.Genre}</p>
+                            <button class="movie__watchlist watchlist">
+                                <i class="fa-solid fa-circle-plus watchlist__add"></i>
+                                Watchlist
+                            </button>                        
+                        </div>
+                        <p class="movie__description">${movie.Plot}</p>
+                    </div>
+                </article>
+                `
+    })
+
+    movieResults.innerHTML = movieHtml.join(`<hr class="movie-results__break">`)
 }
