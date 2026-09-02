@@ -139,3 +139,53 @@ p, h1, h2, h3, h4, h5, h6, span, a, li {
     font-size: 1.5em;
     color: var(--primary-font-color);
 }
+
+.movie {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.movie__image {
+    min-width: 120px;
+    max-width: 15vw;
+}
+
+.movie__details {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.movie__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.movie__minor-details {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.movie__watchlist {
+    color: var(--primary-font-color);
+    border: none;
+    background-color: transparent;
+}
+
+.watchlist__add {
+    color: var(--primary-font-color);
+    font-size: 1.25em;
+}
+
+.movie__description {
+    color: var(--secondary-font-color);
+}
+
+.movie-results__break {
+    width: 100%;
+    border-color: var(--secondary-bg-color);
+}
