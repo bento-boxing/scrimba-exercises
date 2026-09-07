@@ -1,0 +1,13 @@
+{
+  "name": "gold-digger",
+  "version": "1.0.0",
+  "description": "An app to purchase gold with at a random live price",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "bento-boxing",
+  "license": "ISC"
+}
