@@ -3,7 +3,8 @@ import {serveStatic} from "./utils/serveStatic.js";
 import {getPrice} from "./utils/getPrice.js";
 
 const __dirname = import.meta.dirname
-let currentPrice = 3257.88
+// price is in pence
+let currentPrice = 325788
 const PORT = 8080
 
 const server = http.createServer(async (req, res) => {
@@ -17,10 +18,12 @@ const server = http.createServer(async (req, res) => {
         res.setHeader("Cache-Control", "no-cache")
         res.setHeader("Connection", "keep-alive")
 
+        res.write(`event: price-updated\ndata: ${currentPrice}\n\n`)
+
         setInterval(() => {
-            const newPrice = getPrice(currentPrice)
+            currentPrice = getPrice(currentPrice)
             res.write(
-                `event: price-updated\ndata: ${newPrice}\n\n`
+                `event: price-updated\ndata: ${currentPrice}\n\n`
             )
 
         }, 5000)

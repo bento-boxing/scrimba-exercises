@@ -3,6 +3,10 @@ const outputDialog = document.querySelector('.outputs')
 const outputButton = document.querySelector('.outputs button')
 const eventSource = new EventSource('/api/gold-price')
 const priceDisplay = document.getElementById('price-display')
+const formatter = new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP'
+})
 
 investForm.addEventListener('submit', async e => {
     e.preventDefault()
@@ -18,7 +22,8 @@ outputButton.addEventListener('click', e => {
 })
 
 eventSource.addEventListener('price-updated', e => {
-    priceDisplay.textContent = e.data
+    const price = parseInt(e.data) / 100
+    priceDisplay.textContent = formatter.format(price)
 })
 
 eventSource.onerror = event => {
