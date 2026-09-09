@@ -22,8 +22,27 @@ investForm.addEventListener('submit', async e => {
     const formData = new FormData(investForm)
     console.log(formData.get('investment-amount'))
 
-    investmentPrice.textContent = gbpFormatter.format(Number(formData.get('investment-amount')))
-    investmentWeight.textContent = fiveDPFormatter.format(Number(formData.get('investment-amount') / currentPrice))
+    const price = Number(formData.get('investment-amount'))
+    const weight = Number(formData.get('investment-amount') / currentPrice)
+
+    investmentPrice.textContent = gbpFormatter.format(price)
+    investmentWeight.textContent = fiveDPFormatter.format(weight)
+
+    try {
+        const res = await fetch('/api/new-purchase', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({price, weight})
+        })
+
+        if (!res.ok) {
+            throw new Error('Error creating purchase, Response status: ' + res.status)
+        }
+    } catch (err) {
+        console.error(err)
+    }
 
     outputDialog.showModal()
 })
