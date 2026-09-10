@@ -1,4 +1,7 @@
-### GET request to example server
-GET http://localhost:8080/
+### POST request to example server
+POST http://localhost:8080/api/new-purchase
+Content-Type: application/json
+
+{"price":  "100", "weight":  "200"}
 
 ###
