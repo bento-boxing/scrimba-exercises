@@ -12,7 +12,7 @@ const server = http.createServer(async (req, res) => {
         streamUpdateGoldPrice(res);
     } else if (req.url === '/api/new-purchase') {
         const filePath = path.join(__dirname, 'data', 'purchase.txt')
-        newPurchase(req, res, filePath)
+        return await newPurchase(req, res, filePath)
     } else {
         return await serveStatic(req, res, __dirname)
     }
