@@ -20,7 +20,6 @@ let currentPrice = 0
 investForm.addEventListener('submit', async e => {
     e.preventDefault()
     const formData = new FormData(investForm)
-    console.log(formData.get('investment-amount'))
 
     const price = Number(formData.get('investment-amount'))
     const weight = Number(formData.get('investment-amount') / currentPrice)
@@ -39,12 +38,12 @@ investForm.addEventListener('submit', async e => {
 
         if (!res.ok) {
             throw new Error('Error creating purchase, Response status: ' + res.status)
+        } else {
+            outputDialog.showModal()
         }
     } catch (err) {
-        console.error(err)
+        console.log(err)
     }
-
-    outputDialog.showModal()
 })
 
 outputButton.addEventListener('click', e => {
