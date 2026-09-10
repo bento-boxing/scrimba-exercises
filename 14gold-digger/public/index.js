@@ -21,10 +21,10 @@ investForm.addEventListener('submit', async e => {
     e.preventDefault()
     const formData = new FormData(investForm)
 
-    const price = Number(formData.get('investment-amount'))
+    const paid = Number(formData.get('investment-amount'))
     const weight = Number(formData.get('investment-amount') / currentPrice)
 
-    investmentPrice.textContent = gbpFormatter.format(price)
+    investmentPrice.textContent = gbpFormatter.format(paid)
     investmentWeight.textContent = fiveDPFormatter.format(weight)
 
     try {
@@ -33,7 +33,7 @@ investForm.addEventListener('submit', async e => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({price, weight})
+            body: JSON.stringify({paid, weight})
         })
 
         if (!res.ok) {

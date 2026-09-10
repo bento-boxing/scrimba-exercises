@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import {getPrice} from "../utils/getPrice.js"
-import {sendResponse} from "../utils/sendResponse.js";
+import {sendResponse} from "../utils/sendResponse.js"
 let currentPrice = 325788
 
 export function streamUpdateGoldPrice(res) {
@@ -27,13 +27,12 @@ export async function newPurchase(req, res, filePath) {
         req.on('end', async () => {
             body = Buffer.concat(body).toString('utf8')
             const data = JSON.parse(body)
-            console.log(data)
+
+            const content = `${new Date().toISOString()}, amount paid: ${data.paid}, price per Oz: ${currentPrice}p, gold sold: ${data.weight}\n`
+            await fs.writeFile(filePath, content, { encoding: 'utf8', flag: 'a'})
 
             sendResponse(res, 201, 'application/json', JSON.stringify(body))
         })
-
-        // const content = `${new Date().toISOString()}, amount paid: ${data.}`
-        // fs.writeFile(filePath,)
     } catch (err) {
         console.error('Purchase error: ', err)
         sendResponse(res, 500, 'application/json', JSON.stringify(err))
