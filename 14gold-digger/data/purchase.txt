@@ -1,0 +1,1 @@
+2026-09-10T19:31:32.250Z, amount paid: 123, price per Oz: 326671p, gold sold: 0.037652561751731865
